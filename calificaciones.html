@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calificaciones - CampusHub</title>
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/paginas.css">
+</head>
+<body hidden>
+
+<header class="navbar">
+  <div class="logo">
+    <h1>CampusHub</h1>
+    <span>Portal Universitario</span>
+  </div>
+  <nav class="nav-links" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="asignaturas.html">Asignaturas</a>
+    <a href="horarios.html">Horarios</a>
+    <a href="tareas.html">Tareas</a>
+    <a href="calificaciones.html" class="active" aria-current="page">Calificaciones</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="eventos.html">Eventos</a>
+  </nav>
+  <div class="user-profile">
+    <span>Juan Pérez (Estudiante)</span>
+    <a href="index.html" class="btn-logout">Cerrar Sesión</a>
+  </div>
+</header>
+
+<main class="dashboard-container">
+<h2 class="page-title">Calificaciones</h2>
+<section class="card-section"><h2>Notas del semestre 2026-1</h2><div class="table-scroll"><table class="data-table"><thead><tr><th scope="col">Asignatura</th><th scope="col">Evaluación</th><th scope="col">Ponderación</th><th scope="col">Nota</th><th scope="col">Estado</th></tr></thead><tbody><tr><td>Programación Java II</td><td>Parcial 1 Estructura de Datos</td><td>30%</td><td>4.8 / 5.0</td><td><span class="badge badge-approved">Aprobado</span></td></tr><tr><td>Diseño Web Avanzado</td><td>Maquetación Formulario HTML</td><td>25%</td><td>4.5 / 5.0</td><td><span class="badge badge-approved">Aprobado</span></td></tr><tr><td>Bases de Datos</td><td>Modelo Relacional &amp; Consultas</td><td>20%</td><td>4.2 / 5.0</td><td><span class="badge badge-approved">Aprobado</span></td></tr></tbody></table></div><p class="nota-pie">Las notas pendientes aparecerán aquí cuando el docente las publique.</p></section>
+</main>
+
+<footer>
+  <p>&copy; 2026 CampusHub - Corporación Unificada Nacional de Educación Superior (CUN)</p>
+</footer>
+<script type="module" src="js/guard.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusHub - Portal Universitario</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body hidden>
+
+<header class="navbar">
+  <div class="logo">
+    <h1>CampusHub</h1>
+    <span>Portal Universitario</span>
+  </div>
+
+  <nav class="nav-links" aria-label="Navegación principal">
+    <a href="index.html" class="active" aria-current="page">Inicio</a>
+    <a href="asignaturas.html">Asignaturas</a>
+    <a href="horarios.html">Horarios</a>
+    <a href="tareas.html">Tareas</a>
+    <a href="calificaciones.html">Calificaciones</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="eventos.html">Eventos</a>
+  </nav>
+
+  <div class="user-profile">
+    <span>Juan Pérez (Estudiante)</span>
+    <button type="button" id="btn-logout" class="btn-logout">Cerrar sesión</button>
+  </div>
+</header>
+
+<main class="dashboard-container">
+
+  <section class="search-filter-bar" aria-label="Búsqueda y filtros">
+    <label for="buscador" class="sr-only">Buscar</label>
+    <input type="search" id="buscador" class="search-input"
+           placeholder="Buscar por asignatura, tarea o profesor...">
+
+    <div class="filters">
+      <label for="semestre">Semestre:</label>
+      <select id="semestre">
+        <option value="2026-1" selected>2026-1</option>
+        <option value="2025-2">2025-2</option>
+      </select>
+
+      <label for="estado">Estado:</label>
+      <select id="estado">
+        <option value="activas" selected>Activas</option>
+        <option value="finalizadas">Finalizadas</option>
+        <option value="todas">Todas</option>
+      </select>
+    </div>
+  </section>
+
+  <p id="sin-resultados" class="empty" hidden>No hay resultados. Cambia la búsqueda o los filtros.</p>
+
+  <div class="dashboard-grid">
+
+    <div class="main-content">
+
+      <section class="card-section">
+        <h2>Asignaturas matriculadas</h2>
+        <div class="cards-wrapper">
+
+          <article class="card filtrable" data-semestre="2026-1" data-estado="activas">
+            <h3>Programación Java II</h3>
+            <p><strong>Prof:</strong> Carlos Mendoza</p>
+            <p>Lun-Mié 08:00 - 10:00</p>
+            <p>Aula D-201</p>
+          </article>
+
+          <article class="card filtrable" data-semestre="2026-1" data-estado="activas">
+            <h3>Diseño Web Avanzado (HTML/CSS)</h3>
+            <p><strong>Profa:</strong> Ana Gómez</p>
+            <p>Mar-Jue 10:00 - 12:00</p>
+            <p>Aula Lab-03</p>
+          </article>
+
+          <article class="card filtrable" data-semestre="2026-1" data-estado="activas">
+            <h3>Bases de Datos</h3>
+            <p><strong>Prof:</strong> Roberto Silva</p>
+            <p>Vie 14:00 - 18:00</p>
+            <p>Aula D-105</p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="card-section">
+        <h2>Calificaciones recientes</h2>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Asignatura</th>
+                <th scope="col">Evaluación</th>
+                <th scope="col">Ponderación</th>
+                <th scope="col">Nota obtenida</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="filtrable" data-semestre="2026-1" data-estado="activas">
+                <td>Programación Java II</td>
+                <td>Parcial 1 Estructura de Datos</td>
+                <td>30%</td>
+                <td>4.8 / 5.0</td>
+                <td><span class="badge badge-approved">Aprobado</span></td>
+              </tr>
+              <tr class="filtrable" data-semestre="2026-1" data-estado="activas">
+                <td>Diseño Web Avanzado</td>
+                <td>Maquetación Formulario HTML</td>
+                <td>25%</td>
+                <td>4.5 / 5.0</td>
+                <td><span class="badge badge-approved">Aprobado</span></td>
+              </tr>
+              <tr class="filtrable" data-semestre="2026-1" data-estado="activas">
+                <td>Bases de Datos</td>
+                <td>Modelo Relacional &amp; Consultas</td>
+                <td>20%</td>
+                <td>4.2 / 5.0</td>
+                <td><span class="badge badge-approved">Aprobado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="sidebar-content">
+
+      <section class="widget-section">
+        <h2>Próximas tareas pendientes</h2>
+
+        <div class="task-item filtrable" data-semestre="2026-1" data-estado="activas">
+          <h4>Proyecto CampusHub - Entrega de Prototipo</h4>
+          <p>Diseño Web | 15 Oct</p>
+          <span class="badge badge-pending">Pendiente</span>
+        </div>
+
+        <div class="task-item filtrable" data-semestre="2026-1" data-estado="activas">
+          <h4>Taller de Integración de APIs en Java</h4>
+          <p>Programación Java II | 18 Oct</p>
+          <span class="badge badge-progress">En progreso</span>
+        </div>
+      </section>
+
+      <section class="widget-section weather-widget">
+        <h2>Clima en el campus</h2>
+        <div id="weather-content" aria-live="polite">
+          <p class="temp">Cargando clima...</p>
+        </div>
+      </section>
+
+      <section class="widget-section">
+        <h2>Últimas noticias</h2>
+        <ul class="news-list">
+          <li><a href="noticias.html">Inscripciones abiertas para talleres de innovación tecnológica 2026-2.</a></li>
+          <li><a href="noticias.html">Visita del Rector al nuevo edificio de Ingeniería.</a></li>
+        </ul>
+      </section>
+
+    </aside>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 CampusHub - Corporación Unificada Nacional de Educación Superior (CUN)</p>
+</footer>
+
+<script src="js/app.js"></script>
+<script type="module" src="js/guard.js"></script>
+</body>
+</html>

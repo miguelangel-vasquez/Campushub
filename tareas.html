@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tareas - CampusHub</title>
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/paginas.css">
+</head>
+<body hidden>
+
+<header class="navbar">
+  <div class="logo">
+    <h1>CampusHub</h1>
+    <span>Portal Universitario</span>
+  </div>
+  <nav class="nav-links" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="asignaturas.html">Asignaturas</a>
+    <a href="horarios.html">Horarios</a>
+    <a href="tareas.html" class="active" aria-current="page">Tareas</a>
+    <a href="calificaciones.html">Calificaciones</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="eventos.html">Eventos</a>
+  </nav>
+  <div class="user-profile">
+    <span>Juan Pérez (Estudiante)</span>
+    <a href="index.html" class="btn-logout">Cerrar Sesión</a>
+  </div>
+</header>
+
+<main class="dashboard-container">
+<h2 class="page-title">Tareas</h2>
+<section class="card-section"><h2>Mis tareas</h2><div class="table-scroll"><table class="data-table"><thead><tr><th scope="col">Tarea</th><th scope="col">Asignatura</th><th scope="col">Entrega</th><th scope="col">Estado</th></tr></thead><tbody><tr><td>Proyecto CampusHub - Entrega de Prototipo</td><td>Diseño Web Avanzado</td><td>15 Oct</td><td><span class="badge badge-pending">Pendiente</span></td></tr><tr><td>Taller de Integración de APIs en Java</td><td>Programación Java II</td><td>18 Oct</td><td><span class="badge badge-progress">En progreso</span></td></tr><tr><td>Diagrama entidad-relación</td><td>Bases de Datos</td><td>25 Oct</td><td><span class="badge badge-pending">Pendiente</span></td></tr><tr><td>Parcial 1 Estructura de Datos</td><td>Programación Java II</td><td>02 Oct</td><td><span class="badge badge-approved">Entregada</span></td></tr></tbody></table></div></section>
+</main>
+
+<footer>
+  <p>&copy; 2026 CampusHub - Corporación Unificada Nacional de Educación Superior (CUN)</p>
+</footer>
+<script type="module" src="js/guard.js"></script>
+</body>
+</html>
