@@ -1,0 +1,6 @@
+/* Estilos extra para las páginas internas (no reemplaza estilos.css) */
+.page-title { margin: 0 0 1rem; }
+.table-scroll { overflow-x: auto; }
+.horario td, .horario th { vertical-align: top; }
+.horario small { opacity: .75; }
+.nota-pie { margin-top: 1rem; opacity: .75; font-size: .9rem; }
